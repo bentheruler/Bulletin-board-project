@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Bulletin Board</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <h1>Community Bulletin Board</h1>
+    
+    <div id="auth">
+        <h2>Register</h2>
+        <form id="registerForm">
+            <input type="text" id="registerUsername" placeholder="Username" required>
+            <input type="password" id="registerPassword" placeholder="Password" required>
+            <button type="submit">Register</button>
+        </form>
+        
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="text" id="loginUsername" placeholder="Username" required>
+            <input type="password" id="loginPassword" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    
+    <div id="posts" style="display: none;">
+        <h2>Create Post</h2>
+        <form id="createPostForm">
+            <input type="text" id="postTitle" placeholder="Title" required>
+            <textarea id="postContent" placeholder="Content" required></textarea>
+            <button type="submit">Create Post</button>
+        </form>
+        
+        <h2>Announcements</h2>
+        <ul id="postList"></ul>
+    </div>
+
+    <template id="commentTemplate">
+        <div class="comments">
+            <h3>Comments</h3>
+            <ul class="commentList"></ul>
+            <form class="commentForm">
+                <textarea placeholder="Add a comment" required></textarea>
+                <button type="submit">Add Comment</button>
+            </form>
+        </div>
+    </template>
+
+    <script src="js/auth.js"></script>
+    <script src="js/posts.js"></script>
+    <script src="js/comments.js"></script>
+</body>
+</html>
