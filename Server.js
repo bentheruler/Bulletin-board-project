@@ -8,7 +8,7 @@ const port = 5000;
 app.use(cors());
 app.use(bodyParser.json());
 
-const users = []; // This is a placeholder. You should use a database in a real app.
+const users = []; // This is a placeholder. 
 
 app.post('/register', (req, res) => {
     const { username, password } = req.body;
@@ -36,3 +36,4 @@ app.post('/login', (req, res) => {
 app.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);
 });
+
